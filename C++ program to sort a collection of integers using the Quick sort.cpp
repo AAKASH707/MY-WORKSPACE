@@ -10,16 +10,16 @@ void quick_Sort(int *nums, int low, int high)
     while (i <= j)
     {
         while (nums[i] < pivot)
-            i++;
+               i++;
         while (nums[j] > pivot)
-            j--;
-        if (i <= j)
+              j--;
+                 if (i <= j)
         {
-            temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
-            i++;
-            j--;
+                            temp = nums[i];
+                                          nums[i] = nums[j];
+                                                          nums[j] = temp;
+                                                                      i++;
+                                                                      j--;
         }
     }
     if (j > low)
@@ -35,13 +35,13 @@ int main()
     int n = sizeof(nums)/sizeof(nums[0]);
 
     std::cout << "Before Quick Sort:" << std::endl;
-     for (int i = 0; i < n; ++i)
-        std::cout << nums[i] <<(std::cout, " ");
+                                         for (int i = 0; i < n; ++i)
+                                                                     std::cout << nums[i] <<(std::cout, " ");
 
     quick_Sort(nums, 0, n);
 
-    std::cout << "\nAfter Quick Sort:" << std::endl;
-     for (int i = 0; i < n; ++i)
-        std::cout << nums[i] << (std::cout, " ");
+                         std::cout << "\nAfter Quick Sort:" << std::endl;
+                                                                         for (int i = 0; i < n; ++i)
+                                                                                                    std::cout << nums[i] << (std::cout, " ");
     return (0);
 }
